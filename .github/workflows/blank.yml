@@ -23,5 +23,5 @@ jobs:
         run: echo "MY_ENV_VAR=HelloWorld" >> $GITHUB_ENV
 
       - name: Print environment variable
-        if: env.MY_ENV_VAR == 'HelloWorld'
+        if: env.MY_ENV_VAR == 'HelloWorld' && success()
         run: echo "The environment variable is $MY_ENV_VAR"
